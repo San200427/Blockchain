@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Cryptocurrency Blockchain</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+        .container { width: 80%; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        h1 { text-align: center; }
+        button { padding: 10px 15px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        .block { margin-top: 20px; }
+        .block h2 { font-size: 20px; color: #333; }
+        pre { background-color: #f9f9f9; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Cryptocurrency Blockchain</h1>
+
+        <h2>Blockchain</h2>
+        <p>The blockchain currently has {{ blockchain|length }} blocks.</p>
+        <pre>{{ blockchain | tojson(indent=4) }}</pre>
+
+        <button onclick="window.location.href='/mine'">Mine a Block</button>
+    </div>
+</body>
+</html>
